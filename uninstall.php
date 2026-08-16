@@ -5,6 +5,7 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 }
 
 delete_option('wp_simple_template_switch_settings');
+delete_option('wp_simple_template_switch_version');
 
 if (is_multisite()) {
     delete_site_option('wp_simple_template_switch_settings');

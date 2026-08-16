@@ -17,9 +17,10 @@ final class WP_Simple_Template_Switch_Access
     {
         return [
             'enabled' => true,
-            'audience_mode' => 'all',
-            'allowed_roles' => [],
+            'audience_mode' => 'roles',
+            'allowed_roles' => ['administrator'],
             'allowed_users' => [],
+            'allowed_themes' => [],
             'manager_roles' => ['administrator'],
             'manager_users' => [],
             'show_profile' => true,
@@ -38,7 +39,7 @@ final class WP_Simple_Template_Switch_Access
         }
 
         $settings = array_replace(self::defaults(), $stored);
-        foreach (['allowed_roles', 'allowed_users', 'manager_roles', 'manager_users'] as $key) {
+        foreach (['allowed_roles', 'allowed_users', 'allowed_themes', 'manager_roles', 'manager_users'] as $key) {
             if (!is_array($settings[$key])) {
                 $settings[$key] = [];
             }
@@ -118,6 +119,28 @@ final class WP_Simple_Template_Switch_Access
         return $themes;
     }
 
+    /**
+     * @return array<string, WP_Theme>
+     */
+    public static function selectable_themes(): array
+    {
+        $themes = self::themes();
+        $allowed = array_fill_keys(array_map('strval', self::settings()['allowed_themes']), true);
+
+        return array_intersect_key($themes, $allowed);
+    }
+
+    public static function theme_preference(int $user_id = 0): string
+    {
+        $user_id = $user_id > 0 ? $user_id : get_current_user_id();
+        if ($user_id <= 0) {
+            return '';
+        }
+
+        $stylesheet = get_user_meta($user_id, self::USER_META_KEY, true);
+        return is_string($stylesheet) ? $stylesheet : '';
+    }
+
     public static function selected_theme(int $user_id = 0): ?WP_Theme
     {
         $user_id = $user_id > 0 ? $user_id : get_current_user_id();
@@ -125,12 +148,12 @@ final class WP_Simple_Template_Switch_Access
             return null;
         }
 
-        $stylesheet = get_user_meta($user_id, self::USER_META_KEY, true);
-        if (!is_string($stylesheet) || $stylesheet === '') {
+        $stylesheet = self::theme_preference($user_id);
+        if ($stylesheet === '') {
             return null;
         }
 
-        $themes = self::themes();
+        $themes = self::selectable_themes();
         return isset($themes[$stylesheet]) ? $themes[$stylesheet] : null;
     }
 
@@ -141,7 +164,7 @@ final class WP_Simple_Template_Switch_Access
             return true;
         }
 
-        $themes = self::themes();
+        $themes = self::selectable_themes();
         if (!isset($themes[$stylesheet])) {
             return false;
         }

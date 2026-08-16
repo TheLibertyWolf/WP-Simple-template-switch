@@ -4,7 +4,7 @@ Tags: theme, switcher, user, development, preview
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Permet aux utilisateurs autorisés de choisir leur thème WordPress sans modifie
 WP Simple Template Switch ajoute un sélecteur de thème à la page de profil et à la barre d’administration.
 
 La fonctionnalité peut être ouverte à tous les utilisateurs connectés, à certains rôles ou à certains comptes. L’accès à la page de réglages est également délégable par rôle, par utilisateur ou avec l’aptitude `manage_wp_simple_template_switch`.
+
+Les gestionnaires choisissent précisément les thèmes proposés dans le switch et peuvent consulter le thème utilisé par chaque compte. Lors d’une nouvelle activation, seuls les administrateurs peuvent choisir un thème.
 
 Le choix reste personnel : le thème actif du site n’est jamais remplacé.
 
@@ -27,6 +29,7 @@ Langues incluses : français, anglais, allemand, italien, espagnol et portugais.
 3. Ouvrir Réglages → Template Switch.
 4. Configurer les utilisateurs et les rôles autorisés.
 5. Installer le thème alternatif sans l’activer globalement.
+6. Cocher le thème dans la liste des thèmes disponibles dans le switch.
 
 == Frequently Asked Questions ==
 
@@ -47,6 +50,13 @@ Oui. Le plugin applique conjointement les valeurs `stylesheet` et `template` né
 `manage_wp_simple_template_switch`
 
 == Changelog ==
+
+= 2.0.0 =
+* Liste blanche des thèmes disponibles dans le switch.
+* Tableau indiquant le thème utilisé par chaque utilisateur.
+* Détection des préférences indisponibles ou non autorisées.
+* Accès initial limité aux administrateurs.
+* Captures d’écran intégrées au README GitHub.
 
 = 1.1.0 =
 * Traductions complètes en français, anglais, allemand, italien, espagnol et portugais.

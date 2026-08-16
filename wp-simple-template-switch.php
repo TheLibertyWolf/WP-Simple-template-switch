@@ -3,7 +3,7 @@
  * Plugin Name: WP Simple Template Switch
  * Plugin URI: https://github.com/TheLibertyWolf/WP-Simple-template-switch
  * Description: Permet aux utilisateurs autorisés de choisir leur thème WordPress depuis leur profil ou la barre d’administration.
- * Version: 1.1.0
+ * Version: 2.0.0
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Author: SAS Jessy System
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('WP_SIMPLE_TEMPLATE_SWITCH_VERSION', '1.1.0');
+define('WP_SIMPLE_TEMPLATE_SWITCH_VERSION', '2.0.0');
 define('WP_SIMPLE_TEMPLATE_SWITCH_FILE', __FILE__);
 define('WP_SIMPLE_TEMPLATE_SWITCH_DIR', plugin_dir_path(__FILE__));
 
@@ -53,5 +53,6 @@ foreach ($wp_simple_template_switch_modules as $wp_simple_template_switch_module
 unset($wp_simple_template_switch_modules, $wp_simple_template_switch_module, $wp_simple_template_switch_path);
 
 register_activation_hook(__FILE__, ['WP_Simple_Template_Switch', 'activate']);
+WP_Simple_Template_Switch::maybe_upgrade();
 WP_Simple_Template_Switch::boot();
 WP_Simple_Template_Switch_Admin::boot();

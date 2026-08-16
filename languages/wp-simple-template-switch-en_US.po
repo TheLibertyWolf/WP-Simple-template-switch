@@ -3,7 +3,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Project-Id-Version: WP Simple Template Switch 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
 "POT-Creation-Date: 2026-08-16 14:04+0200\n"
 "PO-Revision-Date: 2026-08-16 14:10+0200\n"
@@ -118,11 +118,47 @@ msgstr "Manager users"
 msgid "Si aucune entrée n’est cochée, votre propre compte sera conservé comme gestionnaire afin d’éviter un verrouillage."
 msgstr "If nothing is selected, your own account will remain a manager to prevent lockout."
 
-msgid "Thèmes détectés"
-msgstr "Detected themes"
+msgid "Thèmes disponibles dans le switch"
+msgstr "Themes available in the switch"
 
-msgid "Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs."
-msgstr "Newly installed themes automatically appear in the selectors."
+msgid "Cochez uniquement les thèmes que les utilisateurs autorisés peuvent sélectionner."
+msgstr "Select only the themes that authorized users may choose."
+
+msgid "Version %s"
+msgstr "Version %s"
+
+msgid "thème actif du site"
+msgstr "active site theme"
+
+msgid "Les thèmes non cochés restent installés, mais sont absents du profil et de la barre d’administration. Le thème par défaut du site reste toujours accessible."
+msgstr "Unselected themes remain installed but are hidden from the profile and admin bar. The site’s default theme always remains available."
+
+msgid "Utilisation des thèmes"
+msgstr "Theme usage"
+
+msgid "Consultez le thème utilisé par chaque compte et repérez les préférences qui ne sont plus applicables."
+msgstr "View the theme used by each account and identify preferences that can no longer be applied."
+
+msgid "Utilisateur"
+msgstr "User"
+
+msgid "Rôle(s)"
+msgstr "Role(s)"
+
+msgid "Thème"
+msgstr "Theme"
+
+msgid "Par défaut"
+msgstr "Default"
+
+msgid "Non proposé"
+msgstr "Not offered"
+
+msgid "Accès retiré"
+msgstr "Access removed"
+
+msgid "Actif"
+msgstr "Active"
 
 msgid "Enregistrer les réglages"
 msgstr "Save settings"

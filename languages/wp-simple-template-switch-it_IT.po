@@ -3,7 +3,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Project-Id-Version: WP Simple Template Switch 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
 "POT-Creation-Date: 2026-08-16 14:04+0200\n"
 "PO-Revision-Date: 2026-08-16 14:10+0200\n"
@@ -118,11 +118,47 @@ msgstr "Utenti gestori"
 msgid "Si aucune entrée n’est cochée, votre propre compte sera conservé comme gestionnaire afin d’éviter un verrouillage."
 msgstr "Se non viene selezionata alcuna voce, il tuo account resterà gestore per evitare il blocco dell’accesso."
 
-msgid "Thèmes détectés"
-msgstr "Temi rilevati"
+msgid "Thèmes disponibles dans le switch"
+msgstr "Temi disponibili nello switch"
 
-msgid "Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs."
-msgstr "I nuovi temi installati vengono visualizzati automaticamente nei selettori."
+msgid "Cochez uniquement les thèmes que les utilisateurs autorisés peuvent sélectionner."
+msgstr "Seleziona solo i temi che gli utenti autorizzati possono scegliere."
+
+msgid "Version %s"
+msgstr "Versione %s"
+
+msgid "thème actif du site"
+msgstr "tema attivo del sito"
+
+msgid "Les thèmes non cochés restent installés, mais sont absents du profil et de la barre d’administration. Le thème par défaut du site reste toujours accessible."
+msgstr "I temi non selezionati restano installati, ma non compaiono nel profilo e nella barra di amministrazione. Il tema predefinito del sito resta sempre disponibile."
+
+msgid "Utilisation des thèmes"
+msgstr "Utilizzo dei temi"
+
+msgid "Consultez le thème utilisé par chaque compte et repérez les préférences qui ne sont plus applicables."
+msgstr "Visualizza il tema utilizzato da ogni account e individua le preferenze che non possono più essere applicate."
+
+msgid "Utilisateur"
+msgstr "Utente"
+
+msgid "Rôle(s)"
+msgstr "Ruolo/i"
+
+msgid "Thème"
+msgstr "Tema"
+
+msgid "Par défaut"
+msgstr "Predefinito"
+
+msgid "Non proposé"
+msgstr "Non proposto"
+
+msgid "Accès retiré"
+msgstr "Accesso revocato"
+
+msgid "Actif"
+msgstr "Attivo"
 
 msgid "Enregistrer les réglages"
 msgstr "Salva impostazioni"

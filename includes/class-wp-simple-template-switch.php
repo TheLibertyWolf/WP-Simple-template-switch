@@ -31,18 +31,38 @@ final class WP_Simple_Template_Switch
     public static function activate(): void
     {
         if (get_option(WP_Simple_Template_Switch_Access::OPTION_NAME, null) === null) {
+            $defaults = WP_Simple_Template_Switch_Access::defaults();
+            $defaults['allowed_themes'] = [(string) get_option('stylesheet')];
             add_option(
                 WP_Simple_Template_Switch_Access::OPTION_NAME,
-                WP_Simple_Template_Switch_Access::defaults(),
+                $defaults,
                 '',
                 false
             );
         }
 
+        update_option('wp_simple_template_switch_version', WP_SIMPLE_TEMPLATE_SWITCH_VERSION, false);
+
         $administrator = get_role('administrator');
         if ($administrator instanceof WP_Role) {
             $administrator->add_cap(WP_Simple_Template_Switch_Access::MANAGE_CAPABILITY);
         }
+    }
+
+    public static function maybe_upgrade(): void
+    {
+        $installed_version = (string) get_option('wp_simple_template_switch_version', '1.1.0');
+        if (version_compare($installed_version, WP_SIMPLE_TEMPLATE_SWITCH_VERSION, '>=')) {
+            return;
+        }
+
+        $settings = get_option(WP_Simple_Template_Switch_Access::OPTION_NAME, null);
+        if (is_array($settings) && !array_key_exists('allowed_themes', $settings)) {
+            $settings['allowed_themes'] = [(string) get_option('stylesheet')];
+            update_option(WP_Simple_Template_Switch_Access::OPTION_NAME, $settings, false);
+        }
+
+        update_option('wp_simple_template_switch_version', WP_SIMPLE_TEMPLATE_SWITCH_VERSION, false);
     }
 
     public static function load_textdomain(): void
@@ -113,7 +133,7 @@ final class WP_Simple_Template_Switch
                             ));
                             ?>
                         </option>
-                        <?php foreach (WP_Simple_Template_Switch_Access::themes() as $stylesheet => $theme) : ?>
+                        <?php foreach (WP_Simple_Template_Switch_Access::selectable_themes() as $stylesheet => $theme) : ?>
                             <option value="<?php echo esc_attr($stylesheet); ?>" <?php selected($selected, $stylesheet); ?>>
                                 <?php echo esc_html($theme->get('Name')); ?>
                             </option>
@@ -200,7 +220,7 @@ final class WP_Simple_Template_Switch
             'href' => self::switch_url(''),
         ]);
 
-        foreach (WP_Simple_Template_Switch_Access::themes() as $stylesheet => $theme) {
+        foreach (WP_Simple_Template_Switch_Access::selectable_themes() as $stylesheet => $theme) {
             $is_selected = $selected_theme instanceof WP_Theme && $selected_theme->get_stylesheet() === $stylesheet;
             $admin_bar->add_node([
                 'parent' => 'wp-simple-template-switch',

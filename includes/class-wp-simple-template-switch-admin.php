@@ -77,7 +77,7 @@ final class WP_Simple_Template_Switch_Admin
         $users = get_users([
             'orderby' => 'display_name',
             'order' => 'ASC',
-            'fields' => ['ID', 'display_name', 'user_login'],
+            'fields' => 'all_with_meta',
         ]);
         ?>
         <div class="wrap wp-simple-template-switch-settings">
@@ -158,13 +158,32 @@ final class WP_Simple_Template_Switch_Admin
                 </section>
 
                 <section class="wpsts-card">
-                    <h2><?php esc_html_e('Thèmes détectés', 'wp-simple-template-switch'); ?></h2>
-                    <ul class="wpsts-themes">
+                    <h2><?php esc_html_e('Thèmes disponibles dans le switch', 'wp-simple-template-switch'); ?></h2>
+                    <p><?php esc_html_e('Cochez uniquement les thèmes que les utilisateurs autorisés peuvent sélectionner.', 'wp-simple-template-switch'); ?></p>
+                    <div class="wpsts-theme-grid">
                         <?php foreach (WP_Simple_Template_Switch_Access::themes() as $stylesheet => $theme) : ?>
-                            <li><strong><?php echo esc_html($theme->get('Name')); ?></strong> <code><?php echo esc_html($stylesheet); ?></code> — <?php echo esc_html($theme->get('Version')); ?></li>
+                            <label class="wpsts-theme-option">
+                                <input type="checkbox" name="allowed_themes[]" value="<?php echo esc_attr($stylesheet); ?>" <?php checked(in_array($stylesheet, $settings['allowed_themes'], true)); ?>>
+                                <span>
+                                    <strong><?php echo esc_html($theme->get('Name')); ?></strong>
+                                    <code><?php echo esc_html($stylesheet); ?></code>
+                                    <small>
+                                        <?php echo esc_html(sprintf(__('Version %s', 'wp-simple-template-switch'), $theme->get('Version'))); ?>
+                                        <?php if ($stylesheet === (string) get_option('stylesheet')) : ?>
+                                            — <?php esc_html_e('thème actif du site', 'wp-simple-template-switch'); ?>
+                                        <?php endif; ?>
+                                    </small>
+                                </span>
+                            </label>
                         <?php endforeach; ?>
-                    </ul>
-                    <p class="description"><?php esc_html_e('Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs.', 'wp-simple-template-switch'); ?></p>
+                    </div>
+                    <p class="description"><?php esc_html_e('Les thèmes non cochés restent installés, mais sont absents du profil et de la barre d’administration. Le thème par défaut du site reste toujours accessible.', 'wp-simple-template-switch'); ?></p>
+                </section>
+
+                <section class="wpsts-card">
+                    <h2><?php esc_html_e('Utilisation des thèmes', 'wp-simple-template-switch'); ?></h2>
+                    <p><?php esc_html_e('Consultez le thème utilisé par chaque compte et repérez les préférences qui ne sont plus applicables.', 'wp-simple-template-switch'); ?></p>
+                    <?php self::render_theme_usage($users); ?>
                 </section>
 
                 <?php submit_button(__('Enregistrer les réglages', 'wp-simple-template-switch')); ?>
@@ -278,6 +297,75 @@ final class WP_Simple_Template_Switch_Admin
         }
     }
 
+    /**
+     * @param array<int, WP_User> $users
+     */
+    private static function render_theme_usage(array $users): void
+    {
+        $themes = WP_Simple_Template_Switch_Access::themes();
+        $selectable = WP_Simple_Template_Switch_Access::selectable_themes();
+        $default_stylesheet = (string) get_option('stylesheet');
+        $default_theme = isset($themes[$default_stylesheet]) ? $themes[$default_stylesheet] : wp_get_theme($default_stylesheet);
+        $roles = wp_roles()->roles;
+        ?>
+        <div class="wpsts-usage-table-wrap">
+            <table class="widefat striped wpsts-usage-table">
+                <thead>
+                    <tr>
+                        <th><?php esc_html_e('Utilisateur', 'wp-simple-template-switch'); ?></th>
+                        <th><?php esc_html_e('Rôle(s)', 'wp-simple-template-switch'); ?></th>
+                        <th><?php esc_html_e('Thème', 'wp-simple-template-switch'); ?></th>
+                        <th><?php esc_html_e('État', 'wp-simple-template-switch'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($users as $user) : ?>
+                        <?php
+                        $preference = WP_Simple_Template_Switch_Access::theme_preference((int) $user->ID);
+                        $theme_name = $default_theme->exists() ? $default_theme->get('Name') : $default_stylesheet;
+                        $status = __('Par défaut', 'wp-simple-template-switch');
+                        $status_class = 'wpsts-usage-default';
+
+                        if ($preference !== '') {
+                            if (!isset($themes[$preference])) {
+                                $theme_name = $preference;
+                                $status = __('Thème indisponible', 'wp-simple-template-switch');
+                                $status_class = 'wpsts-usage-warning';
+                            } elseif (!isset($selectable[$preference])) {
+                                $theme_name = $themes[$preference]->get('Name');
+                                $status = __('Non proposé', 'wp-simple-template-switch');
+                                $status_class = 'wpsts-usage-warning';
+                            } elseif (!WP_Simple_Template_Switch_Access::can_choose((int) $user->ID)) {
+                                $theme_name = $themes[$preference]->get('Name');
+                                $status = __('Accès retiré', 'wp-simple-template-switch');
+                                $status_class = 'wpsts-usage-warning';
+                            } else {
+                                $theme_name = $themes[$preference]->get('Name');
+                                $status = __('Actif', 'wp-simple-template-switch');
+                                $status_class = 'wpsts-usage-active';
+                            }
+                        }
+
+                        $role_names = [];
+                        foreach ($user->roles as $role_key) {
+                            if (isset($roles[$role_key]['name'])) {
+                                $role_names[] = translate_user_role($roles[$role_key]['name']);
+                            }
+                        }
+                        ?>
+                        <tr>
+                            <td><strong><?php echo esc_html($user->display_name); ?></strong><br><code><?php echo esc_html($user->user_login); ?></code></td>
+                            <td><?php echo esc_html($role_names !== [] ? implode(', ', $role_names) : '—'); ?></td>
+                            <td><?php echo esc_html($theme_name); ?></td>
+                            <td><span class="wpsts-usage-status <?php echo esc_attr($status_class); ?>"><?php echo esc_html($status); ?></span></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
+    }
+
     public static function save_settings(): void
     {
         if (!WP_Simple_Template_Switch_Access::can_manage()) {
@@ -303,6 +391,7 @@ final class WP_Simple_Template_Switch_Admin
             'audience_mode' => $audience_mode,
             'allowed_roles' => self::sanitize_roles($_POST['allowed_roles'] ?? [], $valid_roles),
             'allowed_users' => self::sanitize_users($_POST['allowed_users'] ?? []),
+            'allowed_themes' => self::sanitize_themes($_POST['allowed_themes'] ?? []),
             'manager_roles' => self::sanitize_roles($_POST['manager_roles'] ?? [], $valid_roles),
             'manager_users' => self::sanitize_users($_POST['manager_users'] ?? []),
             'show_profile' => isset($_POST['show_profile']),
@@ -365,5 +454,24 @@ final class WP_Simple_Template_Switch_Admin
         ]);
 
         return array_values(array_map('intval', $existing));
+    }
+
+    /**
+     * @param mixed $raw_themes
+     * @return array<int, string>
+     */
+    private static function sanitize_themes($raw_themes): array
+    {
+        if (!is_array($raw_themes)) {
+            return [];
+        }
+
+        $requested = array_map(
+            static fn ($theme): string => sanitize_text_field((string) $theme),
+            wp_unslash($raw_themes)
+        );
+        $installed = array_keys(WP_Simple_Template_Switch_Access::themes());
+
+        return array_values(array_intersect(array_unique($requested), $installed));
     }
 }
