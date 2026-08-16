@@ -12,6 +12,8 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le pr
 - tableau de suivi indiquant le thème utilisé par chaque compte ;
 - détection des thèmes supprimés, des thèmes non proposés et des accès retirés ;
 - galerie de captures d’écran dans le README GitHub.
+- tableau de couverture linguistique et documentation dédiée des traductions ;
+- détection des catalogues Gettext dans GitHub Languages/Insights.
 
 ### Modifié
 

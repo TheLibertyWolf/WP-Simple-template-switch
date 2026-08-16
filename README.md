@@ -103,14 +103,18 @@ Consultez [SECURITY.md](SECURITY.md) avant de signaler une vulnérabilité.
 
 ## Langues
 
-WP Simple Template Switch suit automatiquement la langue WordPress du site ou du profil utilisateur. Les catalogues `.po` et `.mo` inclus couvrent :
+Le plugin utilise automatiquement la langue configurée dans WordPress ou dans le profil utilisateur. Le français est la langue source. Des catalogues sont fournis pour l’anglais (`en_US`), l’allemand (`de_DE`), l’italien (`it_IT`), l’espagnol (`es_ES`) et le portugais (`pt_PT`).
 
-- français (`fr_FR`) ;
-- anglais (`en_US`) ;
-- allemand (`de_DE`) ;
-- italien (`it_IT`) ;
-- espagnol (`es_ES`) ;
-- portugais (`pt_PT`).
+| Langue | Locale WordPress | Couverture | État |
+|---|---|---:|---|
+| 🇫🇷 Français | `fr_FR` | 67/67 — 100 % | Langue source |
+| 🇬🇧 Anglais | `en_US` | 67/67 — 100 % | Complet |
+| 🇩🇪 Allemand | `de_DE` | 67/67 — 100 % | Complet |
+| 🇮🇹 Italien | `it_IT` | 67/67 — 100 % | Complet |
+| 🇪🇸 Espagnol | `es_ES` | 67/67 — 100 % | Complet |
+| 🇵🇹 Portugais | `pt_PT` | 67/67 — 100 % | Complet |
+
+Les informations techniques et les règles de contribution sont détaillées dans [TRANSLATIONS.md](TRANSLATIONS.md).
 
 ## Contribution et support
 
