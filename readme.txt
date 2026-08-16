@@ -4,7 +4,7 @@ Tags: theme, switcher, user, development, preview
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,8 @@ WP Simple Template Switch ajoute un sélecteur de thème à la page de profil et
 La fonctionnalité peut être ouverte à tous les utilisateurs connectés, à certains rôles ou à certains comptes. L’accès à la page de réglages est également délégable par rôle, par utilisateur ou avec l’aptitude `manage_wp_simple_template_switch`.
 
 Le choix reste personnel : le thème actif du site n’est jamais remplacé.
+
+Langues incluses : français, anglais, allemand, italien, espagnol et portugais.
 
 == Installation ==
 
@@ -45,6 +47,10 @@ Oui. Le plugin applique conjointement les valeurs `stylesheet` et `template` né
 `manage_wp_simple_template_switch`
 
 == Changelog ==
+
+= 1.1.0 =
+* Traductions complètes en français, anglais, allemand, italien, espagnol et portugais.
+* Catalogues WordPress PO, MO et POT inclus.
 
 = 1.0.0 =
 * Première version publique.

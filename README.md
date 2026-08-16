@@ -2,7 +2,7 @@
 
 WP Simple Template Switch permet à des utilisateurs WordPress autorisés de choisir le thème qu’ils voient sur le site public, sans modifier le thème actif pour les autres visiteurs.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
+[![Version](https://img.shields.io/badge/version-1.1.0-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
 [![WordPress](https://img.shields.io/badge/WordPress-%3E%3D%206.5-21759b)](https://wordpress.org/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
@@ -20,6 +20,7 @@ WP Simple Template Switch permet à des utilisateurs WordPress autorisés de cho
 - prise en charge correcte de la relation parent/enfant via les filtres `template` et `stylesheet` ;
 - préférence enregistrée dans le profil WordPress, sans cookie personnalisé ;
 - interface de réglages inspirée des cartes natives WordPress ;
+- interface traduite en français, anglais, allemand, italien, espagnol et portugais ;
 - suppression complète des options, préférences et aptitudes lors de la désinstallation.
 
 ## Cas d’usage
@@ -78,6 +79,17 @@ Consultez [SECURITY.md](SECURITY.md) avant de signaler une vulnérabilité.
 - PHP 8.1 ou version ultérieure ;
 - installation WordPress simple ou Multisite ;
 - thèmes classiques, thèmes blocs, thèmes parents et enfants.
+
+## Langues
+
+WP Simple Template Switch suit automatiquement la langue WordPress du site ou du profil utilisateur. Les catalogues `.po` et `.mo` inclus couvrent :
+
+- français (`fr_FR`) ;
+- anglais (`en_US`) ;
+- allemand (`de_DE`) ;
+- italien (`it_IT`) ;
+- espagnol (`es_ES`) ;
+- portugais (`pt_PT`).
 
 ## Contribution et support
 

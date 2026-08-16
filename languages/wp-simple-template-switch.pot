@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR SAS Jessy System
+# This file is distributed under the same license as the WP Simple Template Switch package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-"
+"switch/issues\n"
+"POT-Creation-Date: 2026-08-16 14:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. Plugin description.
+msgid "Permet aux utilisateurs autorisés de choisir leur thème WordPress depuis leur profil ou la barre d’administration."
+msgstr ""
+
+#. translators: %s: missing plugin module.
+#: wp-simple-template-switch.php:41
+#, php-format
+msgid ""
+"WP Simple Template Switch : module indisponible (%s). Réinstallez le plugin."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:100
+msgid "Thème personnel"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:103
+msgid "Thème du site"
+msgstr ""
+
+#. translators: %s: site default theme name.
+#: includes/class-wp-simple-template-switch.php:111
+#, php-format
+msgid "Thème par défaut du site (%s)"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:123
+msgid ""
+"Ce choix modifie uniquement le thème que cet utilisateur voit sur le site "
+"public."
+msgstr ""
+
+#. translators: %s: site default theme name.
+#: includes/class-wp-simple-template-switch.php:177
+#, php-format
+msgid "Par défaut (%s)"
+msgstr ""
+
+#. translators: %s: current theme name.
+#: includes/class-wp-simple-template-switch.php:185
+#, php-format
+msgid "Thème : %s"
+msgstr ""
+
+#. translators: %s: site default theme name.
+#: includes/class-wp-simple-template-switch.php:197
+#, php-format
+msgid "Thème du site (%s)"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:240
+msgid "Vous n’êtes pas autorisé à choisir un thème."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:241
+#: includes/class-wp-simple-template-switch-admin.php:70
+#: includes/class-wp-simple-template-switch-admin.php:286
+msgid "Accès refusé"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:251
+msgid "Le thème demandé est indisponible."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch.php:252
+msgid "Thème indisponible"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:26
+#: includes/class-wp-simple-template-switch-admin.php:84
+msgid "WP Simple Template Switch"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:27
+msgid "Template Switch"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:58
+msgid "Réglages"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:69
+#: includes/class-wp-simple-template-switch-admin.php:285
+msgid "Vous n’êtes pas autorisé à gérer ces réglages."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:86
+msgid ""
+"Autorisez des utilisateurs à tester un autre thème sans modifier le thème "
+"actif pour les autres visiteurs."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:90
+msgid "Réglages enregistrés."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:101
+msgid "Activation et emplacements"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:104
+msgid "Activer le choix d’un thème personnel"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:108
+msgid "Afficher le sélecteur sur la page de profil"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:112
+msgid "Afficher le sélecteur dans la barre d’administration"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:117
+msgid "Qui peut choisir son thème ?"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:119
+msgid "Tous les utilisateurs connectés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:120
+msgid "Uniquement les rôles sélectionnés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:121
+msgid "Uniquement les utilisateurs sélectionnés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:126
+msgid "Rôles autorisés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:132
+msgid "Utilisateurs autorisés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:141
+msgid "Qui peut accéder à ces réglages ?"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:142
+msgid ""
+"L’accès peut être accordé par rôle et/ou individuellement. Les super-"
+"administrateurs Multisite conservent toujours l’accès."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:145
+msgid "Rôles gestionnaires"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:151
+msgid "Utilisateurs gestionnaires"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:157
+msgid ""
+"Si aucune entrée n’est cochée, votre propre compte sera conservé comme "
+"gestionnaire afin d’éviter un verrouillage."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:161
+msgid "Thèmes détectés"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:167
+msgid ""
+"Les nouveaux thèmes installés apparaissent automatiquement dans les "
+"sélecteurs."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:170
+msgid "Enregistrer les réglages"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:177
+msgid "État"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:181
+msgid "Choix personnel actif"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:181
+msgid "Choix personnel désactivé"
+msgstr ""
+
+#. translators: %d: number of installed themes.
+#: includes/class-wp-simple-template-switch-admin.php:187
+#, php-format
+msgid "%d thème détecté"
+msgid_plural "%d thèmes détectés"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wp-simple-template-switch-admin.php:192
+msgid "Le thème actif du site n’est jamais modifié par les choix personnels."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:197
+msgid "Utilisation"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:200
+msgid "Choisissez les utilisateurs ou rôles autorisés."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:201
+msgid "Installez le thème à tester sans l’activer globalement."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:202
+msgid "Basculez depuis le profil ou la barre d’administration."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:204
+msgid ""
+"Chaque préférence est enregistrée dans le profil WordPress de l’utilisateur."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:209
+msgid "Sécurité des accès"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:211
+msgid ""
+"Les changements sont protégés par les nonces WordPress et contrôlés côté "
+"serveur."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:212
+msgid ""
+"Le dernier gestionnaire ne peut pas être supprimé accidentellement : le "
+"compte qui enregistre est conservé si nécessaire."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:217
+msgid "Aptitude avancée"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:219
+msgid ""
+"Pour déléguer l’accès avec un gestionnaire de rôles ou d’aptitudes, "
+"attribuez :"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:221
+msgid ""
+"Cette aptitude est attribuée automatiquement au rôle Administrateur lors de "
+"l’activation. Elle s’ajoute aux rôles et utilisateurs sélectionnés dans "
+"cette page."
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:226
+msgid "Auteur"
+msgstr ""
+
+#: includes/class-wp-simple-template-switch-admin.php:233
+msgid "Voir le projet sur GitHub"
+msgstr ""

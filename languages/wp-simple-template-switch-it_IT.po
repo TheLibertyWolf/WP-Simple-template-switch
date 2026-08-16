@@ -1,0 +1,185 @@
+# WP Simple Template Switch translation.
+# Copyright (C) 2026 SAS Jessy System
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
+"POT-Creation-Date: 2026-08-16 14:04+0200\n"
+"PO-Revision-Date: 2026-08-16 14:10+0200\n"
+"Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
+"Language-Team: Italiano\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WP Simple Template Switch translation builder\n"
+
+msgid "Permet aux utilisateurs autorisés de choisir leur thème WordPress depuis leur profil ou la barre d’administration."
+msgstr "Consente agli utenti autorizzati di scegliere il tema WordPress dal profilo o dalla barra di amministrazione."
+
+msgid "WP Simple Template Switch : module indisponible (%s). Réinstallez le plugin."
+msgstr "WP Simple Template Switch: modulo non disponibile (%s). Reinstalla il plugin."
+
+msgid "Thème personnel"
+msgstr "Tema personale"
+
+msgid "Thème du site"
+msgstr "Tema del sito"
+
+msgid "Thème par défaut du site (%s)"
+msgstr "Tema predefinito del sito (%s)"
+
+msgid "Ce choix modifie uniquement le thème que cet utilisateur voit sur le site public."
+msgstr "Questa scelta modifica solo il tema visualizzato da questo utente sul sito pubblico."
+
+msgid "Par défaut (%s)"
+msgstr "Predefinito (%s)"
+
+msgid "Thème : %s"
+msgstr "Tema: %s"
+
+msgid "Thème du site (%s)"
+msgstr "Tema del sito (%s)"
+
+msgid "Vous n’êtes pas autorisé à choisir un thème."
+msgstr "Non sei autorizzato a scegliere un tema."
+
+msgid "Accès refusé"
+msgstr "Accesso negato"
+
+msgid "Le thème demandé est indisponible."
+msgstr "Il tema richiesto non è disponibile."
+
+msgid "Thème indisponible"
+msgstr "Tema non disponibile"
+
+msgid "WP Simple Template Switch"
+msgstr "WP Simple Template Switch"
+
+msgid "Template Switch"
+msgstr "Cambio tema"
+
+msgid "Réglages"
+msgstr "Impostazioni"
+
+msgid "Vous n’êtes pas autorisé à gérer ces réglages."
+msgstr "Non sei autorizzato a gestire queste impostazioni."
+
+msgid "Autorisez des utilisateurs à tester un autre thème sans modifier le thème actif pour les autres visiteurs."
+msgstr "Consenti agli utenti di provare un altro tema senza modificare il tema attivo per gli altri visitatori."
+
+msgid "Réglages enregistrés."
+msgstr "Impostazioni salvate."
+
+msgid "Activation et emplacements"
+msgstr "Attivazione e posizioni"
+
+msgid "Activer le choix d’un thème personnel"
+msgstr "Abilita la scelta di un tema personale"
+
+msgid "Afficher le sélecteur sur la page de profil"
+msgstr "Mostra il selettore nella pagina del profilo"
+
+msgid "Afficher le sélecteur dans la barre d’administration"
+msgstr "Mostra il selettore nella barra di amministrazione"
+
+msgid "Qui peut choisir son thème ?"
+msgstr "Chi può scegliere il proprio tema?"
+
+msgid "Tous les utilisateurs connectés"
+msgstr "Tutti gli utenti connessi"
+
+msgid "Uniquement les rôles sélectionnés"
+msgstr "Solo i ruoli selezionati"
+
+msgid "Uniquement les utilisateurs sélectionnés"
+msgstr "Solo gli utenti selezionati"
+
+msgid "Rôles autorisés"
+msgstr "Ruoli autorizzati"
+
+msgid "Utilisateurs autorisés"
+msgstr "Utenti autorizzati"
+
+msgid "Qui peut accéder à ces réglages ?"
+msgstr "Chi può accedere a queste impostazioni?"
+
+msgid "L’accès peut être accordé par rôle et/ou individuellement. Les super-administrateurs Multisite conservent toujours l’accès."
+msgstr "L’accesso può essere concesso per ruolo e/o individualmente. I super amministratori Multisite mantengono sempre l’accesso."
+
+msgid "Rôles gestionnaires"
+msgstr "Ruoli gestori"
+
+msgid "Utilisateurs gestionnaires"
+msgstr "Utenti gestori"
+
+msgid "Si aucune entrée n’est cochée, votre propre compte sera conservé comme gestionnaire afin d’éviter un verrouillage."
+msgstr "Se non viene selezionata alcuna voce, il tuo account resterà gestore per evitare il blocco dell’accesso."
+
+msgid "Thèmes détectés"
+msgstr "Temi rilevati"
+
+msgid "Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs."
+msgstr "I nuovi temi installati vengono visualizzati automaticamente nei selettori."
+
+msgid "Enregistrer les réglages"
+msgstr "Salva impostazioni"
+
+msgid "État"
+msgstr "Stato"
+
+msgid "Choix personnel actif"
+msgstr "Scelta personale attiva"
+
+msgid "Choix personnel désactivé"
+msgstr "Scelta personale disattivata"
+
+msgid "Le thème actif du site n’est jamais modifié par les choix personnels."
+msgstr "Il tema attivo del sito non viene mai modificato dalle scelte personali."
+
+msgid "Utilisation"
+msgstr "Utilizzo"
+
+msgid "Choisissez les utilisateurs ou rôles autorisés."
+msgstr "Scegli gli utenti o i ruoli autorizzati."
+
+msgid "Installez le thème à tester sans l’activer globalement."
+msgstr "Installa il tema da provare senza attivarlo globalmente."
+
+msgid "Basculez depuis le profil ou la barre d’administration."
+msgstr "Cambia dal profilo o dalla barra di amministrazione."
+
+msgid "Chaque préférence est enregistrée dans le profil WordPress de l’utilisateur."
+msgstr "Ogni preferenza viene salvata nel profilo WordPress dell’utente."
+
+msgid "Sécurité des accès"
+msgstr "Sicurezza degli accessi"
+
+msgid "Les changements sont protégés par les nonces WordPress et contrôlés côté serveur."
+msgstr "Le modifiche sono protette dai nonce di WordPress e controllate lato server."
+
+msgid "Le dernier gestionnaire ne peut pas être supprimé accidentellement : le compte qui enregistre est conservé si nécessaire."
+msgstr "L’ultimo gestore non può essere rimosso accidentalmente: se necessario, l’account che salva viene mantenuto."
+
+msgid "Aptitude avancée"
+msgstr "Capacità avanzata"
+
+msgid "Pour déléguer l’accès avec un gestionnaire de rôles ou d’aptitudes, attribuez :"
+msgstr "Per delegare l’accesso con un gestore di ruoli o capacità, assegna:"
+
+msgid "Cette aptitude est attribuée automatiquement au rôle Administrateur lors de l’activation. Elle s’ajoute aux rôles et utilisateurs sélectionnés dans cette page."
+msgstr "Questa capacità viene assegnata automaticamente al ruolo Amministratore all’attivazione. Si aggiunge ai ruoli e agli utenti selezionati in questa pagina."
+
+msgid "Auteur"
+msgstr "Autore"
+
+msgid "Voir le projet sur GitHub"
+msgstr "Visualizza il progetto su GitHub"
+
+#, php-format
+msgid "%d thème détecté"
+msgid_plural "%d thèmes détectés"
+msgstr[0] "%d tema rilevato"
+msgstr[1] "%d temi rilevati"

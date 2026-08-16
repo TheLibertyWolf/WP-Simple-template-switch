@@ -1,0 +1,185 @@
+# WP Simple Template Switch translation.
+# Copyright (C) 2026 SAS Jessy System
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
+"POT-Creation-Date: 2026-08-16 14:04+0200\n"
+"PO-Revision-Date: 2026-08-16 14:10+0200\n"
+"Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WP Simple Template Switch translation builder\n"
+
+msgid "Permet aux utilisateurs autorisés de choisir leur thème WordPress depuis leur profil ou la barre d’administration."
+msgstr "Allows authorized users to choose their WordPress theme from their profile or the admin bar."
+
+msgid "WP Simple Template Switch : module indisponible (%s). Réinstallez le plugin."
+msgstr "WP Simple Template Switch: module unavailable (%s). Reinstall the plugin."
+
+msgid "Thème personnel"
+msgstr "Personal theme"
+
+msgid "Thème du site"
+msgstr "Site theme"
+
+msgid "Thème par défaut du site (%s)"
+msgstr "Default site theme (%s)"
+
+msgid "Ce choix modifie uniquement le thème que cet utilisateur voit sur le site public."
+msgstr "This choice only changes the theme this user sees on the public site."
+
+msgid "Par défaut (%s)"
+msgstr "Default (%s)"
+
+msgid "Thème : %s"
+msgstr "Theme: %s"
+
+msgid "Thème du site (%s)"
+msgstr "Site theme (%s)"
+
+msgid "Vous n’êtes pas autorisé à choisir un thème."
+msgstr "You are not allowed to choose a theme."
+
+msgid "Accès refusé"
+msgstr "Access denied"
+
+msgid "Le thème demandé est indisponible."
+msgstr "The requested theme is unavailable."
+
+msgid "Thème indisponible"
+msgstr "Theme unavailable"
+
+msgid "WP Simple Template Switch"
+msgstr "WP Simple Template Switch"
+
+msgid "Template Switch"
+msgstr "Theme Switch"
+
+msgid "Réglages"
+msgstr "Settings"
+
+msgid "Vous n’êtes pas autorisé à gérer ces réglages."
+msgstr "You are not allowed to manage these settings."
+
+msgid "Autorisez des utilisateurs à tester un autre thème sans modifier le thème actif pour les autres visiteurs."
+msgstr "Allow users to test another theme without changing the active theme for other visitors."
+
+msgid "Réglages enregistrés."
+msgstr "Settings saved."
+
+msgid "Activation et emplacements"
+msgstr "Activation and locations"
+
+msgid "Activer le choix d’un thème personnel"
+msgstr "Enable personal theme selection"
+
+msgid "Afficher le sélecteur sur la page de profil"
+msgstr "Show the selector on the profile page"
+
+msgid "Afficher le sélecteur dans la barre d’administration"
+msgstr "Show the selector in the admin bar"
+
+msgid "Qui peut choisir son thème ?"
+msgstr "Who can choose their theme?"
+
+msgid "Tous les utilisateurs connectés"
+msgstr "All logged-in users"
+
+msgid "Uniquement les rôles sélectionnés"
+msgstr "Selected roles only"
+
+msgid "Uniquement les utilisateurs sélectionnés"
+msgstr "Selected users only"
+
+msgid "Rôles autorisés"
+msgstr "Allowed roles"
+
+msgid "Utilisateurs autorisés"
+msgstr "Allowed users"
+
+msgid "Qui peut accéder à ces réglages ?"
+msgstr "Who can access these settings?"
+
+msgid "L’accès peut être accordé par rôle et/ou individuellement. Les super-administrateurs Multisite conservent toujours l’accès."
+msgstr "Access can be granted by role and/or individually. Multisite super admins always retain access."
+
+msgid "Rôles gestionnaires"
+msgstr "Manager roles"
+
+msgid "Utilisateurs gestionnaires"
+msgstr "Manager users"
+
+msgid "Si aucune entrée n’est cochée, votre propre compte sera conservé comme gestionnaire afin d’éviter un verrouillage."
+msgstr "If nothing is selected, your own account will remain a manager to prevent lockout."
+
+msgid "Thèmes détectés"
+msgstr "Detected themes"
+
+msgid "Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs."
+msgstr "Newly installed themes automatically appear in the selectors."
+
+msgid "Enregistrer les réglages"
+msgstr "Save settings"
+
+msgid "État"
+msgstr "Status"
+
+msgid "Choix personnel actif"
+msgstr "Personal selection enabled"
+
+msgid "Choix personnel désactivé"
+msgstr "Personal selection disabled"
+
+msgid "Le thème actif du site n’est jamais modifié par les choix personnels."
+msgstr "The site’s active theme is never changed by personal selections."
+
+msgid "Utilisation"
+msgstr "Usage"
+
+msgid "Choisissez les utilisateurs ou rôles autorisés."
+msgstr "Choose the allowed users or roles."
+
+msgid "Installez le thème à tester sans l’activer globalement."
+msgstr "Install the theme to test without activating it globally."
+
+msgid "Basculez depuis le profil ou la barre d’administration."
+msgstr "Switch from the profile or admin bar."
+
+msgid "Chaque préférence est enregistrée dans le profil WordPress de l’utilisateur."
+msgstr "Each preference is saved in the user’s WordPress profile."
+
+msgid "Sécurité des accès"
+msgstr "Access security"
+
+msgid "Les changements sont protégés par les nonces WordPress et contrôlés côté serveur."
+msgstr "Changes are protected by WordPress nonces and checked server-side."
+
+msgid "Le dernier gestionnaire ne peut pas être supprimé accidentellement : le compte qui enregistre est conservé si nécessaire."
+msgstr "The last manager cannot be removed accidentally: the account saving the settings is retained if needed."
+
+msgid "Aptitude avancée"
+msgstr "Advanced capability"
+
+msgid "Pour déléguer l’accès avec un gestionnaire de rôles ou d’aptitudes, attribuez :"
+msgstr "To delegate access with a role or capability manager, grant:"
+
+msgid "Cette aptitude est attribuée automatiquement au rôle Administrateur lors de l’activation. Elle s’ajoute aux rôles et utilisateurs sélectionnés dans cette page."
+msgstr "This capability is automatically granted to the Administrator role on activation. It supplements the roles and users selected on this page."
+
+msgid "Auteur"
+msgstr "Author"
+
+msgid "Voir le projet sur GitHub"
+msgstr "View the project on GitHub"
+
+#, php-format
+msgid "%d thème détecté"
+msgid_plural "%d thèmes détectés"
+msgstr[0] "%d theme detected"
+msgstr[1] "%d themes detected"

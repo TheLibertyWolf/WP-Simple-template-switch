@@ -1,0 +1,185 @@
+# WP Simple Template Switch translation.
+# Copyright (C) 2026 SAS Jessy System
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Simple Template Switch 1.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
+"POT-Creation-Date: 2026-08-16 14:04+0200\n"
+"PO-Revision-Date: 2026-08-16 14:10+0200\n"
+"Last-Translator: SAS Jessy System <contact@jessysystem.com>\n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WP Simple Template Switch translation builder\n"
+
+msgid "Permet aux utilisateurs autorisés de choisir leur thème WordPress depuis leur profil ou la barre d’administration."
+msgstr "Permite que los usuarios autorizados elijan su tema de WordPress desde el perfil o la barra de administración."
+
+msgid "WP Simple Template Switch : module indisponible (%s). Réinstallez le plugin."
+msgstr "WP Simple Template Switch: módulo no disponible (%s). Reinstala el plugin."
+
+msgid "Thème personnel"
+msgstr "Tema personal"
+
+msgid "Thème du site"
+msgstr "Tema del sitio"
+
+msgid "Thème par défaut du site (%s)"
+msgstr "Tema predeterminado del sitio (%s)"
+
+msgid "Ce choix modifie uniquement le thème que cet utilisateur voit sur le site public."
+msgstr "Esta opción solo cambia el tema que este usuario ve en el sitio público."
+
+msgid "Par défaut (%s)"
+msgstr "Predeterminado (%s)"
+
+msgid "Thème : %s"
+msgstr "Tema: %s"
+
+msgid "Thème du site (%s)"
+msgstr "Tema del sitio (%s)"
+
+msgid "Vous n’êtes pas autorisé à choisir un thème."
+msgstr "No tienes permiso para elegir un tema."
+
+msgid "Accès refusé"
+msgstr "Acceso denegado"
+
+msgid "Le thème demandé est indisponible."
+msgstr "El tema solicitado no está disponible."
+
+msgid "Thème indisponible"
+msgstr "Tema no disponible"
+
+msgid "WP Simple Template Switch"
+msgstr "WP Simple Template Switch"
+
+msgid "Template Switch"
+msgstr "Cambio de tema"
+
+msgid "Réglages"
+msgstr "Ajustes"
+
+msgid "Vous n’êtes pas autorisé à gérer ces réglages."
+msgstr "No tienes permiso para gestionar estos ajustes."
+
+msgid "Autorisez des utilisateurs à tester un autre thème sans modifier le thème actif pour les autres visiteurs."
+msgstr "Permite que los usuarios prueben otro tema sin cambiar el tema activo para los demás visitantes."
+
+msgid "Réglages enregistrés."
+msgstr "Ajustes guardados."
+
+msgid "Activation et emplacements"
+msgstr "Activación y ubicaciones"
+
+msgid "Activer le choix d’un thème personnel"
+msgstr "Activar la selección de un tema personal"
+
+msgid "Afficher le sélecteur sur la page de profil"
+msgstr "Mostrar el selector en la página de perfil"
+
+msgid "Afficher le sélecteur dans la barre d’administration"
+msgstr "Mostrar el selector en la barra de administración"
+
+msgid "Qui peut choisir son thème ?"
+msgstr "¿Quién puede elegir su tema?"
+
+msgid "Tous les utilisateurs connectés"
+msgstr "Todos los usuarios conectados"
+
+msgid "Uniquement les rôles sélectionnés"
+msgstr "Solo los perfiles seleccionados"
+
+msgid "Uniquement les utilisateurs sélectionnés"
+msgstr "Solo los usuarios seleccionados"
+
+msgid "Rôles autorisés"
+msgstr "Perfiles autorizados"
+
+msgid "Utilisateurs autorisés"
+msgstr "Usuarios autorizados"
+
+msgid "Qui peut accéder à ces réglages ?"
+msgstr "¿Quién puede acceder a estos ajustes?"
+
+msgid "L’accès peut être accordé par rôle et/ou individuellement. Les super-administrateurs Multisite conservent toujours l’accès."
+msgstr "El acceso puede concederse por perfil o de forma individual. Los superadministradores de Multisitio siempre conservan el acceso."
+
+msgid "Rôles gestionnaires"
+msgstr "Perfiles gestores"
+
+msgid "Utilisateurs gestionnaires"
+msgstr "Usuarios gestores"
+
+msgid "Si aucune entrée n’est cochée, votre propre compte sera conservé comme gestionnaire afin d’éviter un verrouillage."
+msgstr "Si no se selecciona ninguna opción, tu propia cuenta seguirá siendo gestora para evitar un bloqueo."
+
+msgid "Thèmes détectés"
+msgstr "Temas detectados"
+
+msgid "Les nouveaux thèmes installés apparaissent automatiquement dans les sélecteurs."
+msgstr "Los temas nuevos instalados aparecen automáticamente en los selectores."
+
+msgid "Enregistrer les réglages"
+msgstr "Guardar ajustes"
+
+msgid "État"
+msgstr "Estado"
+
+msgid "Choix personnel actif"
+msgstr "Selección personal activa"
+
+msgid "Choix personnel désactivé"
+msgstr "Selección personal desactivada"
+
+msgid "Le thème actif du site n’est jamais modifié par les choix personnels."
+msgstr "El tema activo del sitio nunca cambia debido a las selecciones personales."
+
+msgid "Utilisation"
+msgstr "Uso"
+
+msgid "Choisissez les utilisateurs ou rôles autorisés."
+msgstr "Elige los usuarios o perfiles autorizados."
+
+msgid "Installez le thème à tester sans l’activer globalement."
+msgstr "Instala el tema que quieras probar sin activarlo globalmente."
+
+msgid "Basculez depuis le profil ou la barre d’administration."
+msgstr "Cambia desde el perfil o la barra de administración."
+
+msgid "Chaque préférence est enregistrée dans le profil WordPress de l’utilisateur."
+msgstr "Cada preferencia se guarda en el perfil de WordPress del usuario."
+
+msgid "Sécurité des accès"
+msgstr "Seguridad de acceso"
+
+msgid "Les changements sont protégés par les nonces WordPress et contrôlés côté serveur."
+msgstr "Los cambios están protegidos por nonces de WordPress y se comprueban en el servidor."
+
+msgid "Le dernier gestionnaire ne peut pas être supprimé accidentellement : le compte qui enregistre est conservé si nécessaire."
+msgstr "El último gestor no puede eliminarse por accidente: si es necesario, se conserva la cuenta que guarda los ajustes."
+
+msgid "Aptitude avancée"
+msgstr "Capacidad avanzada"
+
+msgid "Pour déléguer l’accès avec un gestionnaire de rôles ou d’aptitudes, attribuez :"
+msgstr "Para delegar el acceso con un gestor de perfiles o capacidades, asigna:"
+
+msgid "Cette aptitude est attribuée automatiquement au rôle Administrateur lors de l’activation. Elle s’ajoute aux rôles et utilisateurs sélectionnés dans cette page."
+msgstr "Esta capacidad se asigna automáticamente al perfil Administrador durante la activación. Se añade a los perfiles y usuarios seleccionados en esta página."
+
+msgid "Auteur"
+msgstr "Autor"
+
+msgid "Voir le projet sur GitHub"
+msgstr "Ver el proyecto en GitHub"
+
+#, php-format
+msgid "%d thème détecté"
+msgid_plural "%d thèmes détectés"
+msgstr[0] "%d tema detectado"
+msgstr[1] "%d temas detectados"
