@@ -190,6 +190,19 @@ final class WP_Simple_Template_Switch
 
         $selected_theme = WP_Simple_Template_Switch_Access::selected_theme();
         $default_theme = self::site_default_theme();
+        $default_stylesheet = $default_theme->get_stylesheet();
+        $selected_stylesheet = $selected_theme instanceof WP_Theme ? $selected_theme->get_stylesheet() : '';
+        $toggle_stylesheet = '';
+
+        if ($selected_stylesheet === '' || $selected_stylesheet === $default_stylesheet) {
+            foreach (WP_Simple_Template_Switch_Access::selectable_themes() as $stylesheet => $theme) {
+                if ($stylesheet !== $default_stylesheet) {
+                    $toggle_stylesheet = $stylesheet;
+                    break;
+                }
+            }
+        }
+
         $current_name = $selected_theme instanceof WP_Theme
             ? $selected_theme->get('Name')
             : sprintf(
@@ -205,7 +218,7 @@ final class WP_Simple_Template_Switch
                 __('Thème : %s', 'wp-simple-template-switch'),
                 $current_name
             )),
-            'href' => self::switch_url(''),
+            'href' => self::switch_url($toggle_stylesheet),
             'meta' => ['class' => 'wp-simple-template-switch'],
         ]);
 
@@ -274,7 +287,14 @@ final class WP_Simple_Template_Switch
             );
         }
 
-        wp_safe_redirect(wp_get_referer() ?: home_url('/'));
+        $redirect = wp_get_referer() ?: home_url('/');
+        $redirect = wp_validate_redirect($redirect, home_url('/'));
+
+        if (str_starts_with($redirect, admin_url())) {
+            $redirect = home_url('/');
+        }
+
+        wp_safe_redirect($redirect);
         exit;
     }
 }

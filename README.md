@@ -2,7 +2,7 @@
 
 WP Simple Template Switch permet à des utilisateurs WordPress autorisés de choisir le thème qu’ils voient sur le site public, sans modifier le thème actif pour les autres visiteurs.
 
-[![Version](https://img.shields.io/badge/version-2.0.0-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
+[![Version](https://img.shields.io/badge/version-2.0.1-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
 [![WordPress](https://img.shields.io/badge/WordPress-%3E%3D%206.5-21759b)](https://wordpress.org/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
@@ -11,7 +11,7 @@ WP Simple Template Switch permet à des utilisateurs WordPress autorisés de cho
 ## Fonctionnalités
 
 - choix personnel du thème depuis la page de profil ;
-- changement rapide depuis la barre d’administration WordPress ;
+- bascule directe entre le thème du site et le thème alternatif depuis la barre d’administration WordPress ;
 - retour immédiat au thème par défaut du site ;
 - activation ou désactivation globale de la fonctionnalité ;
 - autorisation pour tous les comptes connectés, certains rôles ou certains utilisateurs ;

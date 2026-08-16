@@ -4,7 +4,7 @@ Tags: theme, switcher, user, development, preview
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ Oui. Le plugin applique conjointement les valeurs `stylesheet` et `template` né
 `manage_wp_simple_template_switch`
 
 == Changelog ==
+
+= 2.0.1 =
+* Le bouton principal de la barre d’administration bascule directement entre le thème du site et le thème alternatif.
+* Depuis wp-admin, le changement redirige vers le site public pour afficher immédiatement le résultat.
 
 = 2.0.0 =
 * Liste blanche des thèmes disponibles dans le switch.
