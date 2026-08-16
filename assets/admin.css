@@ -74,6 +74,11 @@
     margin: 9px 0;
 }
 
+.wpsts-choice-list .description {
+    display: block;
+    margin: 3px 0 0 24px;
+}
+
 .wpsts-columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

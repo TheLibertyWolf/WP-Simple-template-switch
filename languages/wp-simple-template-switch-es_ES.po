@@ -3,7 +3,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Simple Template Switch 2.0.0\n"
+"Project-Id-Version: WP Simple Template Switch 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues\n"
 "POT-Creation-Date: 2026-08-16 14:04+0200\n"
 "PO-Revision-Date: 2026-08-16 14:10+0200\n"
@@ -84,6 +84,21 @@ msgstr "Mostrar el selector en la página de perfil"
 
 msgid "Afficher le sélecteur dans la barre d’administration"
 msgstr "Mostrar el selector en la barra de administración"
+
+msgid "Mode de la barre d’administration"
+msgstr "Modo de la barra de administración"
+
+msgid "Sélecteur de thèmes"
+msgstr "Selector de temas"
+
+msgid "Le libellé ouvre la liste des thèmes disponibles."
+msgstr "La etiqueta abre la lista de temas disponibles."
+
+msgid "Bouton switch"
+msgstr "Botón switch"
+
+msgid "Un clic bascule directement entre le thème du site et le premier thème alternatif."
+msgstr "Un clic cambia directamente entre el tema del sitio y el primer tema alternativo."
 
 msgid "Qui peut choisir son thème ?"
 msgstr "¿Quién puede elegir su tema?"

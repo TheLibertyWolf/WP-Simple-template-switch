@@ -4,7 +4,7 @@ Tags: theme, switcher, user, development, preview
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,8 @@ WP Simple Template Switch ajoute un sélecteur de thème à la page de profil et
 La fonctionnalité peut être ouverte à tous les utilisateurs connectés, à certains rôles ou à certains comptes. L’accès à la page de réglages est également délégable par rôle, par utilisateur ou avec l’aptitude `manage_wp_simple_template_switch`.
 
 Les gestionnaires choisissent précisément les thèmes proposés dans le switch et peuvent consulter le thème utilisé par chaque compte. Lors d’une nouvelle activation, seuls les administrateurs peuvent choisir un thème.
+
+La barre d’administration propose deux modes : un sélecteur ouvrant la liste des thèmes, ou un bouton switch pour basculer directement entre deux thèmes.
 
 Le choix reste personnel : le thème actif du site n’est jamais remplacé.
 
@@ -50,6 +52,10 @@ Oui. Le plugin applique conjointement les valeurs `stylesheet` et `template` né
 `manage_wp_simple_template_switch`
 
 == Changelog ==
+
+= 2.1.0 =
+* Choix entre un sélecteur de thèmes et un bouton switch dans la barre d’administration.
+* Le sélecteur devient le mode par défaut.
 
 = 2.0.1 =
 * Le bouton principal de la barre d’administration bascule directement entre le thème du site et le thème alternatif.

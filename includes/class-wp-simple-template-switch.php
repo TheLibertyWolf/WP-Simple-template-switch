@@ -57,9 +57,22 @@ final class WP_Simple_Template_Switch
         }
 
         $settings = get_option(WP_Simple_Template_Switch_Access::OPTION_NAME, null);
-        if (is_array($settings) && !array_key_exists('allowed_themes', $settings)) {
-            $settings['allowed_themes'] = [(string) get_option('stylesheet')];
-            update_option(WP_Simple_Template_Switch_Access::OPTION_NAME, $settings, false);
+        if (is_array($settings)) {
+            $settings_changed = false;
+
+            if (!array_key_exists('allowed_themes', $settings)) {
+                $settings['allowed_themes'] = [(string) get_option('stylesheet')];
+                $settings_changed = true;
+            }
+
+            if (!array_key_exists('admin_bar_mode', $settings)) {
+                $settings['admin_bar_mode'] = 'selector';
+                $settings_changed = true;
+            }
+
+            if ($settings_changed) {
+                update_option(WP_Simple_Template_Switch_Access::OPTION_NAME, $settings, false);
+            }
         }
 
         update_option('wp_simple_template_switch_version', WP_SIMPLE_TEMPLATE_SWITCH_VERSION, false);
@@ -211,6 +224,13 @@ final class WP_Simple_Template_Switch
                 $default_theme->get('Name')
             );
 
+        $admin_bar_mode = $settings['admin_bar_mode'] === 'switch' ? 'switch' : 'selector';
+        $parent_meta = ['class' => 'wp-simple-template-switch'];
+        if ($admin_bar_mode === 'selector') {
+            $parent_meta['tabindex'] = '0';
+            $parent_meta['aria-haspopup'] = 'true';
+        }
+
         $admin_bar->add_node([
             'id' => 'wp-simple-template-switch',
             'title' => esc_html(sprintf(
@@ -218,8 +238,8 @@ final class WP_Simple_Template_Switch
                 __('Thème : %s', 'wp-simple-template-switch'),
                 $current_name
             )),
-            'href' => self::switch_url($toggle_stylesheet),
-            'meta' => ['class' => 'wp-simple-template-switch'],
+            'href' => $admin_bar_mode === 'switch' ? self::switch_url($toggle_stylesheet) : false,
+            'meta' => $parent_meta,
         ]);
 
         $admin_bar->add_node([

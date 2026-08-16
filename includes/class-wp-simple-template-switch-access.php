@@ -25,6 +25,7 @@ final class WP_Simple_Template_Switch_Access
             'manager_users' => [],
             'show_profile' => true,
             'show_admin_bar' => true,
+            'admin_bar_mode' => 'selector',
         ];
     }
 

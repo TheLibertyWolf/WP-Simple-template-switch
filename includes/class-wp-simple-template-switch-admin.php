@@ -111,6 +111,19 @@ final class WP_Simple_Template_Switch_Admin
                         <input type="checkbox" name="show_admin_bar" value="1" <?php checked(!empty($settings['show_admin_bar'])); ?>>
                         <span><?php esc_html_e('Afficher le sélecteur dans la barre d’administration', 'wp-simple-template-switch'); ?></span>
                     </label>
+                    <fieldset class="wpsts-choice-list">
+                        <legend><strong><?php esc_html_e('Mode de la barre d’administration', 'wp-simple-template-switch'); ?></strong></legend>
+                        <label>
+                            <input type="radio" name="admin_bar_mode" value="selector" <?php checked($settings['admin_bar_mode'], 'selector'); ?>>
+                            <?php esc_html_e('Sélecteur de thèmes', 'wp-simple-template-switch'); ?>
+                            <span class="description"><?php esc_html_e('Le libellé ouvre la liste des thèmes disponibles.', 'wp-simple-template-switch'); ?></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="admin_bar_mode" value="switch" <?php checked($settings['admin_bar_mode'], 'switch'); ?>>
+                            <?php esc_html_e('Bouton switch', 'wp-simple-template-switch'); ?>
+                            <span class="description"><?php esc_html_e('Un clic bascule directement entre le thème du site et le premier thème alternatif.', 'wp-simple-template-switch'); ?></span>
+                        </label>
+                    </fieldset>
                 </section>
 
                 <section class="wpsts-card">
@@ -386,6 +399,13 @@ final class WP_Simple_Template_Switch_Admin
             $audience_mode = 'all';
         }
 
+        $admin_bar_mode = isset($_POST['admin_bar_mode'])
+            ? sanitize_key(wp_unslash($_POST['admin_bar_mode']))
+            : 'selector';
+        if (!in_array($admin_bar_mode, ['selector', 'switch'], true)) {
+            $admin_bar_mode = 'selector';
+        }
+
         $settings = [
             'enabled' => isset($_POST['enabled']),
             'audience_mode' => $audience_mode,
@@ -396,6 +416,7 @@ final class WP_Simple_Template_Switch_Admin
             'manager_users' => self::sanitize_users($_POST['manager_users'] ?? []),
             'show_profile' => isset($_POST['show_profile']),
             'show_admin_bar' => isset($_POST['show_admin_bar']),
+            'admin_bar_mode' => $admin_bar_mode,
         ];
 
         if (
