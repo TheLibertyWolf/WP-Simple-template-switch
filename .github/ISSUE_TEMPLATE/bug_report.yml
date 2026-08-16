@@ -1,0 +1,43 @@
+name: Rapport de bug
+description: Signaler un dysfonctionnement reproductible de WP Simple Template Switch
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ne publiez jamais de mot de passe, cookie, donnée personnelle ou vulnérabilité exploitable ici."
+  - type: input
+    id: version
+    attributes:
+      label: Version du plugin
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Versions WordPress et PHP
+    validations:
+      required: true
+  - type: input
+    id: themes
+    attributes:
+      label: Thèmes concernés
+      description: Indiquez les thèmes parent et enfant, avec leur version.
+    validations:
+      required: true
+  - type: input
+    id: account
+    attributes:
+      label: Rôle ou type de compte concerné
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes de reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu et résultat obtenu
+    validations:
+      required: true

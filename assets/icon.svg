@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">WP Simple Template Switch</title>
+  <rect width="128" height="128" rx="24" fill="#2271b1"/>
+  <rect x="22" y="24" width="60" height="70" rx="7" fill="#fff" opacity=".95"/>
+  <rect x="46" y="34" width="60" height="70" rx="7" fill="#dff1ff" stroke="#fff" stroke-width="5"/>
+  <path d="M34 111h54m0 0-11-11m11 11-11 11" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M94 17H40m0 0 11-11M40 17l11 11" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

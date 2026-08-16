@@ -1,0 +1,28 @@
+name: PHP lint
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.1', '8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - name: Validate composer.json
+        run: composer validate --strict --no-check-publish
+      - name: Install lint dependencies
+        run: composer install --no-interaction --no-progress
+      - name: Lint PHP files
+        run: composer lint

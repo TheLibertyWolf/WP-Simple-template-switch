@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Politique de sécurité
+    url: https://github.com/TheLibertyWolf/WP-Simple-template-switch/blob/main/SECURITY.md
+    about: Procédure privée pour signaler une vulnérabilité
+  - name: Support
+    url: https://github.com/TheLibertyWolf/WP-Simple-template-switch/blob/main/SUPPORT.md
+    about: Informations à fournir avant d’ouvrir une demande

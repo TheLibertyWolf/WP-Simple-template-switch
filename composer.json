@@ -1,0 +1,25 @@
+{
+  "name": "jessysystem/wp-simple-template-switch",
+  "description": "Per-user WordPress theme switcher with role and user access controls.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "SAS Jessy System",
+      "homepage": "https://jessysystem.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "php-parallel-lint/php-parallel-lint": "^1.4"
+  },
+  "scripts": {
+    "lint": "parallel-lint --exclude vendor ."
+  },
+  "support": {
+    "issues": "https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues",
+    "source": "https://github.com/TheLibertyWolf/WP-Simple-template-switch"
+  }
+}

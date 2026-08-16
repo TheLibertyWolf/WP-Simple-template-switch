@@ -1,0 +1,113 @@
+.wp-simple-template-switch-settings {
+    max-width: 1280px;
+}
+
+.wp-simple-template-switch-settings > .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.wpsts-card {
+    margin: 18px 0;
+    padding: 20px 24px;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.wpsts-poststuff {
+    margin-top: 18px;
+}
+
+.wpsts-poststuff #post-body-content {
+    min-width: 0;
+}
+
+.wpsts-poststuff .postbox .inside {
+    margin-bottom: 0;
+}
+
+.wpsts-poststuff #post-body-content > form > .wpsts-card:first-of-type {
+    margin-top: 0;
+}
+
+.wpsts-github-button {
+    align-items: center;
+    display: inline-flex !important;
+    gap: 5px;
+}
+
+.wpsts-github-button svg {
+    height: 17px;
+    width: 17px;
+}
+
+.wpsts-status {
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+
+.wpsts-status .dashicons {
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.wpsts-status-active .dashicons {
+    color: #008a20;
+}
+
+.wpsts-status-inactive .dashicons {
+    color: #646970;
+}
+
+.wpsts-card h2 {
+    margin-top: 0;
+}
+
+.wpsts-toggle,
+.wpsts-choice-list label,
+.wpsts-scrollbox label {
+    display: block;
+    margin: 9px 0;
+}
+
+.wpsts-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 18px;
+}
+
+.wpsts-scrollbox {
+    max-height: 260px;
+    overflow: auto;
+    padding: 8px 14px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    background: #f6f7f7;
+}
+
+.wpsts-scrollbox code {
+    color: #646970;
+    font-size: 11px;
+}
+
+.wpsts-themes {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 782px) {
+    .wpsts-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .wpsts-poststuff #post-body.columns-2 #postbox-container-1 {
+        margin-right: 0;
+        width: 100%;
+    }
+}
