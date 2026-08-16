@@ -4,6 +4,13 @@ Toutes les modifications notables de WP Simple Template Switch sont documentées
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet utilise le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [2.1.1] - 2026-08-16
+
+### Corrigé
+
+- le mode Sélecteur affiche désormais un véritable champ déroulant directement dans la barre d’administration ;
+- le thème actif et les thèmes autorisés sont disponibles sans dépendre du sous-menu au survol.
+
 ## [2.1.0] - 2026-08-16
 
 ### Ajouté
@@ -66,3 +73,4 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le pr
 [2.0.0]: https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases/tag/v2.0.0
 [2.0.1]: https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases/tag/v2.0.1
 [2.1.0]: https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases/tag/v2.1.0
+[2.1.1]: https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases/tag/v2.1.1

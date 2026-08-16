@@ -24,6 +24,8 @@ final class WP_Simple_Template_Switch
         add_action('personal_options_update', [self::class, 'save_profile_selector']);
         add_action('edit_user_profile_update', [self::class, 'save_profile_selector']);
 
+        add_action('wp_enqueue_scripts', [self::class, 'enqueue_admin_bar_assets']);
+        add_action('admin_enqueue_scripts', [self::class, 'enqueue_admin_bar_assets']);
         add_action('admin_bar_menu', [self::class, 'render_admin_bar_switcher'], 90);
         add_action('admin_post_wp_simple_template_switch', [self::class, 'handle_switch']);
     }
@@ -190,6 +192,32 @@ final class WP_Simple_Template_Switch
         WP_Simple_Template_Switch_Access::save_theme($user_id, $stylesheet);
     }
 
+    public static function enqueue_admin_bar_assets(): void
+    {
+        if (!is_admin_bar_showing() || !WP_Simple_Template_Switch_Access::can_choose()) {
+            return;
+        }
+
+        $settings = WP_Simple_Template_Switch_Access::settings();
+        if (empty($settings['show_admin_bar']) || $settings['admin_bar_mode'] !== 'selector') {
+            return;
+        }
+
+        wp_enqueue_style(
+            'wp-simple-template-switch-admin-bar',
+            plugins_url('assets/admin-bar.css', WP_SIMPLE_TEMPLATE_SWITCH_FILE),
+            [],
+            WP_SIMPLE_TEMPLATE_SWITCH_VERSION
+        );
+        wp_enqueue_script(
+            'wp-simple-template-switch-admin-bar',
+            plugins_url('assets/admin-bar.js', WP_SIMPLE_TEMPLATE_SWITCH_FILE),
+            [],
+            WP_SIMPLE_TEMPLATE_SWITCH_VERSION,
+            true
+        );
+    }
+
     public static function render_admin_bar_switcher(WP_Admin_Bar $admin_bar): void
     {
         if (!is_user_logged_in() || !WP_Simple_Template_Switch_Access::can_choose()) {
@@ -225,10 +253,14 @@ final class WP_Simple_Template_Switch
             );
 
         $admin_bar_mode = $settings['admin_bar_mode'] === 'switch' ? 'switch' : 'selector';
-        $parent_meta = ['class' => 'wp-simple-template-switch'];
         if ($admin_bar_mode === 'selector') {
-            $parent_meta['tabindex'] = '0';
-            $parent_meta['aria-haspopup'] = 'true';
+            $admin_bar->add_node([
+                'id' => 'wp-simple-template-switch',
+                'title' => self::admin_bar_selector($selected_stylesheet, $default_theme),
+                'href' => false,
+                'meta' => ['class' => 'wp-simple-template-switch wpsts-selector-mode'],
+            ]);
+            return;
         }
 
         $admin_bar->add_node([
@@ -238,8 +270,8 @@ final class WP_Simple_Template_Switch
                 __('Thème : %s', 'wp-simple-template-switch'),
                 $current_name
             )),
-            'href' => $admin_bar_mode === 'switch' ? self::switch_url($toggle_stylesheet) : false,
-            'meta' => $parent_meta,
+            'href' => self::switch_url($toggle_stylesheet),
+            'meta' => ['class' => 'wp-simple-template-switch wpsts-switch-mode'],
         ]);
 
         $admin_bar->add_node([
@@ -262,6 +294,41 @@ final class WP_Simple_Template_Switch
                 'href' => self::switch_url($stylesheet),
             ]);
         }
+    }
+
+    private static function admin_bar_selector(string $selected_stylesheet, WP_Theme $default_theme): string
+    {
+        $default_stylesheet = $default_theme->get_stylesheet();
+        $default_selected = $selected_stylesheet === '' || $selected_stylesheet === $default_stylesheet;
+        $options = sprintf(
+            '<option value="%s"%s>%s</option>',
+            esc_url(self::switch_url('')),
+            selected($default_selected, true, false),
+            esc_html(sprintf(
+                /* translators: %s: site default theme name. */
+                __('Thème du site (%s)', 'wp-simple-template-switch'),
+                $default_theme->get('Name')
+            ))
+        );
+
+        foreach (WP_Simple_Template_Switch_Access::selectable_themes() as $stylesheet => $theme) {
+            if ($stylesheet === $default_stylesheet) {
+                continue;
+            }
+
+            $options .= sprintf(
+                '<option value="%s"%s>%s</option>',
+                esc_url(self::switch_url($stylesheet)),
+                selected($selected_stylesheet, $stylesheet, false),
+                esc_html($theme->get('Name'))
+            );
+        }
+
+        return sprintf(
+            '<select class="wpsts-admin-bar-select" aria-label="%s">%s</select>',
+            esc_attr__('Choisir un thème', 'wp-simple-template-switch'),
+            $options
+        );
     }
 
     private static function switch_url(string $stylesheet): string

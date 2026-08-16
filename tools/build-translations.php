@@ -67,6 +67,7 @@ $translations = [
     'Le libellé ouvre la liste des thèmes disponibles.' => ['The label opens the list of available themes.', 'Die Beschriftung öffnet die Liste der verfügbaren Themes.', 'L’etichetta apre l’elenco dei temi disponibili.', 'La etiqueta abre la lista de temas disponibles.', 'A etiqueta abre a lista de temas disponíveis.'],
     'Bouton switch' => ['Switch button', 'Umschaltfläche', 'Pulsante switch', 'Botón switch', 'Botão switch'],
     'Un clic bascule directement entre le thème du site et le premier thème alternatif.' => ['One click switches directly between the site theme and the first alternative theme.', 'Ein Klick wechselt direkt zwischen dem Website-Theme und dem ersten alternativen Theme.', 'Un clic passa direttamente dal tema del sito al primo tema alternativo e viceversa.', 'Un clic cambia directamente entre el tema del sitio y el primer tema alternativo.', 'Um clique alterna diretamente entre o tema do site e o primeiro tema alternativo.'],
+    'Choisir un thème' => ['Choose a theme', 'Theme auswählen', 'Scegli un tema', 'Elegir un tema', 'Escolher um tema'],
     'Qui peut choisir son thème ?' => ['Who can choose their theme?', 'Wer kann sein Theme auswählen?', 'Chi può scegliere il proprio tema?', '¿Quién puede elegir su tema?', 'Quem pode escolher o seu tema?'],
     'Tous les utilisateurs connectés' => ['All logged-in users', 'Alle angemeldeten Benutzer', 'Tutti gli utenti connessi', 'Todos los usuarios conectados', 'Todos os utilizadores com sessão iniciada'],
     'Uniquement les rôles sélectionnés' => ['Selected roles only', 'Nur ausgewählte Rollen', 'Solo i ruoli selezionati', 'Solo los perfiles seleccionados', 'Apenas as funções selecionadas'],
@@ -209,7 +210,7 @@ $language_dir = dirname(__DIR__) . '/languages';
 
 foreach ($locales as $locale => $metadata) {
     $header = [
-        'Project-Id-Version: WP Simple Template Switch 2.1.0',
+        'Project-Id-Version: WP Simple Template Switch 2.1.1',
         'Report-Msgid-Bugs-To: https://github.com/TheLibertyWolf/WP-Simple-template-switch/issues',
         'POT-Creation-Date: 2026-08-16 14:04+0200',
         'PO-Revision-Date: 2026-08-16 14:10+0200',

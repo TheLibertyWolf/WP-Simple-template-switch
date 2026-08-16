@@ -4,12 +4,12 @@ WP Simple Template Switch utilise le système d’internationalisation natif de 
 
 | Langue | Locale WordPress | Couverture | État |
 |---|---|---:|---|
-| Français | `fr_FR` | 72/72 — 100 % | Langue source |
-| Anglais | `en_US` | 72/72 — 100 % | Complet |
-| Allemand | `de_DE` | 72/72 — 100 % | Complet |
-| Italien | `it_IT` | 72/72 — 100 % | Complet |
-| Espagnol | `es_ES` | 72/72 — 100 % | Complet |
-| Portugais | `pt_PT` | 72/72 — 100 % | Complet |
+| Français | `fr_FR` | 73/73 — 100 % | Langue source |
+| Anglais | `en_US` | 73/73 — 100 % | Complet |
+| Allemand | `de_DE` | 73/73 — 100 % | Complet |
+| Italien | `it_IT` | 73/73 — 100 % | Complet |
+| Espagnol | `es_ES` | 73/73 — 100 % | Complet |
+| Portugais | `pt_PT` | 73/73 — 100 % | Complet |
 
 ## Fichiers
 
@@ -18,7 +18,7 @@ WP Simple Template Switch utilise le système d’internationalisation natif de 
 - fichiers `.mo` : catalogues compilés chargés par WordPress ;
 - `tools/build-translations.php` : source reproductible des six catalogues.
 
-Les catalogues sont validés avec `msgfmt` et comparés au fichier POT avec `msgcmp`. Chaque langue contient l’intégralité des 72 messages, y compris les formes plurielles et la description de l’extension.
+Les catalogues sont validés avec `msgfmt` et comparés au fichier POT avec `msgcmp`. Chaque langue contient l’intégralité des 73 messages, y compris les formes plurielles et la description de l’extension.
 
 ## Mettre à jour une traduction
 

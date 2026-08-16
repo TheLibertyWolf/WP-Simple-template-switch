@@ -2,7 +2,7 @@
 
 WP Simple Template Switch permet à des utilisateurs WordPress autorisés de choisir le thème qu’ils voient sur le site public, sans modifier le thème actif pour les autres visiteurs.
 
-[![Version](https://img.shields.io/badge/version-2.1.0-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
+[![Version](https://img.shields.io/badge/version-2.1.1-2271b1)](https://github.com/TheLibertyWolf/WP-Simple-template-switch/releases)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777bb4)](https://www.php.net/)
 [![WordPress](https://img.shields.io/badge/WordPress-%3E%3D%206.5-21759b)](https://wordpress.org/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-46b450)](LICENSE)
@@ -61,7 +61,7 @@ Une fois coché dans les réglages, le nouveau thème apparaît sur la page de p
 
 <a href="https://i.postimg.cc/QdZVPM7y/Capture-d-e-cran-2026-08-16-a-14-12-21.png"><img src="https://i.postimg.cc/QdZVPM7y/Capture-d-e-cran-2026-08-16-a-14-12-21.png" alt="Sélecteur de thème dans la barre d’administration WordPress"></a>
 
-Le mode **Sélecteur de thèmes** ouvre la liste sans changer immédiatement de thème. Le mode **Bouton switch** bascule en un clic entre le thème du site et le premier thème alternatif. Le mode se choisit dans **Réglages → Template Switch**.
+Le mode **Sélecteur de thèmes** affiche un véritable champ déroulant directement dans la barre. Le mode **Bouton switch** bascule en un clic entre le thème du site et le premier thème alternatif. Le mode se choisit dans **Réglages → Template Switch**.
 
 ## Fonctionnement
 
@@ -109,12 +109,12 @@ Le plugin utilise automatiquement la langue configurée dans WordPress ou dans l
 
 | Langue | Locale WordPress | Couverture | État |
 |---|---|---:|---|
-| 🇫🇷 Français | `fr_FR` | 72/72 — 100 % | Langue source |
-| 🇬🇧 Anglais | `en_US` | 72/72 — 100 % | Complet |
-| 🇩🇪 Allemand | `de_DE` | 72/72 — 100 % | Complet |
-| 🇮🇹 Italien | `it_IT` | 72/72 — 100 % | Complet |
-| 🇪🇸 Espagnol | `es_ES` | 72/72 — 100 % | Complet |
-| 🇵🇹 Portugais | `pt_PT` | 72/72 — 100 % | Complet |
+| 🇫🇷 Français | `fr_FR` | 73/73 — 100 % | Langue source |
+| 🇬🇧 Anglais | `en_US` | 73/73 — 100 % | Complet |
+| 🇩🇪 Allemand | `de_DE` | 73/73 — 100 % | Complet |
+| 🇮🇹 Italien | `it_IT` | 73/73 — 100 % | Complet |
+| 🇪🇸 Espagnol | `es_ES` | 73/73 — 100 % | Complet |
+| 🇵🇹 Portugais | `pt_PT` | 73/73 — 100 % | Complet |
 
 Les informations techniques et les règles de contribution sont détaillées dans [TRANSLATIONS.md](TRANSLATIONS.md).
 

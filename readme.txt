@@ -4,7 +4,7 @@ Tags: theme, switcher, user, development, preview
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,10 @@ Oui. Le plugin applique conjointement les valeurs `stylesheet` et `template` né
 `manage_wp_simple_template_switch`
 
 == Changelog ==
+
+= 2.1.1 =
+* Le mode Sélecteur affiche un véritable champ déroulant dans la barre d’administration.
+* Les thèmes peuvent être choisis sans dépendre d’un sous-menu au survol.
 
 = 2.1.0 =
 * Choix entre un sélecteur de thèmes et un bouton switch dans la barre d’administration.
